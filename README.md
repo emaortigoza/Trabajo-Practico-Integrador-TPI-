@@ -1,12 +1,10 @@
 # 🌍 Trabajo Práctico Integrador – Programación 1  
 ### Gestión de Datos de Países en Python  
-**Emanuel Ortigoza**
-<<<<<<< Updated upstream
 
-=======
+**Emanuel Ortigoza**
+
 --
->>>>>>> Stashed changes
-**Javier**
+**Javier Soliz**
 
 
 ---
