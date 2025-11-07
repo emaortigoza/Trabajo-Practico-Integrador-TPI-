@@ -44,79 +44,71 @@ def existe_pais(nombre, paises):
      return False
 
 def agregar_pais(RUTA_CSV):
-     
-     paises = cargar_datos(RUTA_CSV)
-<<<<<<< Updated upstream
-     print("*" * 10 + " Agregar País " + "*" * 10)
+    paises = cargar_datos(RUTA_CSV)
+    print("\n--- AGREGAR NUEVO PAÍS ---")
 
-     # ---- Validación del nombre ----
-     while True:
-          nombre = input("Ingrese el nombre del país: ").strip()
-          if not nombre:
-               print("❌ El nombre no puede estar vacío.")
-               continue
-          if existe_pais(nombre, paises):
-               print("⚠️ El país ya existe en la base de datos.")
-               return
-          break
+    # --- Validación del nombre ---
+    while True:
+        nombre = input("Ingrese el nombre del país: ").strip()
+        if not nombre:
+            print("❌ El nombre no puede estar vacío.")
+            continue
+        if any(not (c.isalpha() or c.isspace() or c in "-'") for c in nombre):
+            print("❌ El nombre solo puede contener letras, espacios, guiones o apóstrofes.")
+            continue
+        if existe_pais(nombre, paises):
+            print("⚠️ El país ya existe en la base de datos.")
+            return
+        break
 
-     # ---- Validación de la población ----
-     while True:
-          poblacion = input("Ingrese la población: ").strip()
-          if not poblacion:
-               print("❌ La población no puede estar vacía.")
-               continue
-          if not poblacion.isdigit() or int(poblacion) <= 0:
-               print("❌ La población debe ser un número entero positivo.")
-               continue
-          poblacion = int(poblacion)
-          break
+    # --- Validación de población ---
+    while True:
+        poblacion = input("Ingrese la población (entero positivo): ").strip()
+        if not poblacion:
+            print("❌ La población no puede estar vacía.")
+            continue
+        if not poblacion.isdigit() or int(poblacion) <= 0:
+            print("❌ Debe ingresar un número entero positivo.")
+            continue
+        poblacion = int(poblacion)
+        break
 
-     # ---- Validación de la superficie ----
-     while True:
-          superficie = input("Ingrese la superficie (km²): ").strip()
-          if not superficie:
-               print("❌ La superficie no puede estar vacía.")
-               continue
-          if not superficie.isdigit() or int(superficie) <= 0:
-               print("❌ La superficie debe ser un número entero positivo.")
-               continue
-          superficie = int(superficie)
-          break
+    # --- Validación de superficie ---
+    while True:
+        superficie = input("Ingrese la superficie en km² (entero positivo): ").strip()
+        if not superficie:
+            print("❌ La superficie no puede estar vacía.")
+            continue
+        if not superficie.isdigit() or int(superficie) <= 0:
+            print("❌ Debe ingresar un número entero positivo.")
+            continue
+        superficie = int(superficie)
+        break
 
-     # ---- Validación del continente ----
-     continentes_validos = ["America", "Europa", "Asia", "África", "Oceanía", "Antártida"]
-     while True:
-          continente = input("Ingrese el continente: ").strip()
-          if not continente:
-               print("❌ El continente no puede estar vacío.")
-               continue
-          if continente not in continentes_validos:
-               print(f"❌ Continente inválido. Opciones válidas: {', '.join(continentes_validos)}")
-               continue
-          break
+    # --- Validación de continente ---
+    continentes_validos = ["América", "Europa", "Asia", "África", "Oceanía", "Antártida"]
 
-     #---- Agregar el nuevo país ----
-     nuevo_pais = {"nombre": nombre, "poblacion": poblacion, "superficie": superficie, "continente": continente}
-     paises.append(nuevo_pais)
+    while True:
+        continente = input("Ingrese el continente: ").strip().capitalize()
+        if not continente:
+            print("❌ El continente no puede estar vacío.")
+            continue
+        if continente not in continentes_validos:
+            print("❌ Continente inválido. Debe ser uno de los siguientes:")
+            print(", ".join(continentes_validos))
+            continue
+        break
 
-=======
-     nombre = input("Ingrese el nombre del país: ").strip()
-     if not nombre:
-          print("❌ El nombre no puede estar vacío.")
-          return
-     if existe_pais(nombre, paises):
-          print("❌ El país ya existe.")
-          return
-     poblacion = input("Ingrese la población (número entero): ").strip().lower()
-     superficie = input("Ingrese la superficie en km² (número entero): ").strip().lower()
-     continente = input("Ingrese el continente: ").strip().lower() or "Desconocido"
-     poblacion = int(poblacion) if poblacion.isdigit() and int(poblacion) >= 0 else 0
-     superficie = int(superficie) if superficie.isdigit() and int(superficie) >= 0 else 0
-     paises.append({"nombre": nombre, "poblacion": poblacion, "superficie": superficie, "continente": continente})
->>>>>>> Stashed changes
-     guardar_datos(RUTA_CSV, paises)
-     print(f"✅ País '{nombre}' agregado correctamente.")
+    # --- Agregar país validado ---
+    paises.append({
+        "nombre": nombre,
+        "poblacion": poblacion,
+        "superficie": superficie,
+        "continente": continente
+    })
+
+    guardar_datos(RUTA_CSV, paises)
+    print(f"✅ País '{nombre}' agregado exitosamente.")
 
 def actualizar_pais(RUTA_CSV):
     paises = cargar_datos(RUTA_CSV)
