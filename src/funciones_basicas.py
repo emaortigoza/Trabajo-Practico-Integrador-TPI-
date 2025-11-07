@@ -46,6 +46,7 @@ def existe_pais(nombre, paises):
 def agregar_pais(RUTA_CSV):
      
      paises = cargar_datos(RUTA_CSV)
+<<<<<<< Updated upstream
      print("*" * 10 + " Agregar País " + "*" * 10)
 
      # ---- Validación del nombre ----
@@ -99,6 +100,21 @@ def agregar_pais(RUTA_CSV):
      nuevo_pais = {"nombre": nombre, "poblacion": poblacion, "superficie": superficie, "continente": continente}
      paises.append(nuevo_pais)
 
+=======
+     nombre = input("Ingrese el nombre del país: ").strip()
+     if not nombre:
+          print("❌ El nombre no puede estar vacío.")
+          return
+     if existe_pais(nombre, paises):
+          print("❌ El país ya existe.")
+          return
+     poblacion = input("Ingrese la población (número entero): ").strip().lower()
+     superficie = input("Ingrese la superficie en km² (número entero): ").strip().lower()
+     continente = input("Ingrese el continente: ").strip().lower() or "Desconocido"
+     poblacion = int(poblacion) if poblacion.isdigit() and int(poblacion) >= 0 else 0
+     superficie = int(superficie) if superficie.isdigit() and int(superficie) >= 0 else 0
+     paises.append({"nombre": nombre, "poblacion": poblacion, "superficie": superficie, "continente": continente})
+>>>>>>> Stashed changes
      guardar_datos(RUTA_CSV, paises)
      print(f"✅ País '{nombre}' agregado correctamente.")
 
