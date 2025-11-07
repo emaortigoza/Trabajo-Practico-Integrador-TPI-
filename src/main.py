@@ -4,13 +4,15 @@ from funciones_basicas import(
      actualizar_pais,
      buscar_pais,
 )
-from pathlib import Path
-""" from funciones_avanzadas import(
+
+from funciones_avanzadas import(
      filtrar_paises,
      ordenar_paises,
      mostrar_estadisticas,
 )
- """
+
+from pathlib import Path
+ 
 DIR_SCRIPTS = Path(__file__).resolve().parent
 DIR_RAIZ = DIR_SCRIPTS.parent
 RUTA_CSV = DIR_RAIZ / "data" / "data_paises.csv"
@@ -43,11 +45,11 @@ def mostrar_menu():
                case "4":
                     buscar_pais(RUTA_CSV)
                case "5":
-                    """ filtrar_paises(RUTA_CSV) """
+                    filtrar_paises(RUTA_CSV)
                case "6":
-                    """ ordenar_paises(RUTA_CSV) """
+                    ordenar_paises(RUTA_CSV)
                case "7":
-                    """ mostrar_estadisticas(RUTA_CSV) """
+                    mostrar_estadisticas(RUTA_CSV)
                case "8":
                     print("Saliendo del programa...")
                     break

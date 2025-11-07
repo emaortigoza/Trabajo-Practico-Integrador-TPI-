@@ -1,5 +1,4 @@
-from fuciones_basicas import(
-    cargar_datos,guardar_datos,existe_pais,agregar_pais,actualizar_pais,buscar_pais,mostrar_paises)
+from funciones_basicas import cargar_datos
 
 def filtrar_paises(RUTA_CSV):
     paises = cargar_datos(RUTA_CSV)
