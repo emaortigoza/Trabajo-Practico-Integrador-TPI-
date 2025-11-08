@@ -42,6 +42,7 @@ TPI_Paises/
 ![alt text](img/captura1.png)
 
 ![alt text](img/captura2.png)
+
 ---
 
 ## 🧱 Funcionalidades Principales
