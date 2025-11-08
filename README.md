@@ -1,9 +1,10 @@
 # 🌍 Trabajo Práctico Integrador – Programación 1  
 ### Gestión de Datos de Países en Python  
 
+---
 **Emanuel Ortigoza**
 
---
+---
 **Javier Soliz**
 
 
@@ -37,7 +38,6 @@ TPI_Paises/
 ---
 
 ## ▶️ Ejecución del Programa
-Desde la carpeta raíz del proyecto, ejecutar el siguiente comando:
 
 ![alt text](img/captura1.png)
 
