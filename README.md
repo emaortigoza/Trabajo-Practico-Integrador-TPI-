@@ -43,6 +43,54 @@ TPI_Paises/
 
 ![alt text](img/captura2.png)
 
+Se procede a ejecutar el programa a traves del menu de opciones:
+
+1) Se muestran todos los paises disponibles en el CSV.
+
+![alt text](img/captura3.png)
+
+2) Se agrega un nuevo pais.
+
+![alt text](img/captura4.png)
+
+   El pais se agrego correctamente.
+
+![alt text](img/captura5.png)
+
+3) Se actualiza la informancion de un pais. En este caso, el nuevo pais agregado.
+
+![alt text](img/captura6.png)
+
+4) Se busca un pais por nombre.
+
+![alt text](img/captura7.png)
+
+5) Filtrado de paises por continente, rango de poblacion y superficie.
+
+![alt text](img/captura8.png)
+
+![alt text](img/captura9.png)
+
+![alt text](img/captura10.png)
+
+6) Se ordenan los paises por nombre, poblacion y superficie. Cada opcion se muestra en orden
+   Ascendente o descendente dependiendo la preferencia del usuario.
+
+![alt text](img/captura11.png)
+
+![alt text](img/captura12.png)
+
+![alt text](img/captura13.png)
+
+7) Se muestran las estadisticas de los paises en base a la mayor y menor poblacion, promedio
+   de poblacion y superficie, y la cantidad de paises por continente.
+
+![alt text](img/captura14.png)
+
+8) Finalmente, se selecciona la ultima opcion, que consiste en el fin de ejecucion del programa.
+
+![alt text](img/captura15.png)
+ 
 ---
 
 ## 🧱 Funcionalidades Principales
