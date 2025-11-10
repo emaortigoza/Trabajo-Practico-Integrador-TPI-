@@ -30,6 +30,8 @@ TPI_Paises/
 │   ├── funciones_basicas.py
 │   ├── funciones_avanzadas.py
 │   └── main.py
+├── img/
+|
 ├── docs/
 │   └── informe_teorico.pdf
 └── README.md
